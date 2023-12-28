@@ -1,0 +1,408 @@
+body {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.text-center {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-height: 75vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+}
+
+.form-container {
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+    margin-top: 30px;
+    margin-right: 120vh;
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input,
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus,
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.table-container {
+    margin-top:30px;
+    margin-left:105px;
+}
+
+.table th,
+.table td {
+    color: white;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-buttons .btn {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.action-buttons a {
+    margin: 4px 0;
+}
+
+.checkbox-options {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 250px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    position: relative;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.obat-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.obat-tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+
+.obat-tooltip:hover .obat-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nota-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.nota-table th, .nota-table td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Mengatur warna latar belakang tabel dan teks di dalamnya */
+.nota-table {
+    color: #ffffff; /* Warna teks */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin-right: 0;
+        margin-left: 15% ;
+    }
+
+    .form-submit-btn {
+        width: 100%;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+    }
+
+    .table-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .table {
+        max-width: 50%;
+    }
+}
+
+.login-text-center {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 20px;
+}
+
+.login-form-container {
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-form-container button:active {
+    scale: 0.95;
+}
+
+.login-form-container .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form-container .login-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.login-form-container .login-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.login-form-container .login-form-group input,
+.login-form-container .login-form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.login-form-container .login-form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.login-form-container .login-form-group input:focus,
+.login-form-container .login-form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.login-form-container .login-form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.login-form-container .login-form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .login-form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin-right: 0;
+        margin-left: 15% ;
+    }
+
+    .login-form-submit-btn {
+        width: 100%;
+    }
+
+    .login-form-group label {
+        font-size: 12px;
+    }
+
+    .login-form-group input,
+    .login-form-group textarea {
+        font-size: 12px;
+    }
+}
