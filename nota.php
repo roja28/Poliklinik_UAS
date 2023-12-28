@@ -1,7 +1,6 @@
 <?php
 include_once("koneksi.php");
 
-// Pastikan ID periksa telah diberikan di URL
 if (!isset($_GET['id'])) {
     echo "ID periksa tidak ditemukan.";
     exit;
@@ -9,7 +8,6 @@ if (!isset($_GET['id'])) {
 
 $id_periksa = $_GET['id'];
 
-// Ambil informasi nota berdasarkan ID periksa, termasuk informasi obat dari tabel obat
 $query_nota = "SELECT periksa.id, 
                      periksa.id_pasien, 
                      periksa.id_dokter, 
@@ -49,7 +47,6 @@ $nota_data = mysqli_fetch_assoc($result_nota);
             <th>Catatan</th>
             <th>Obat</th>
             <th>Total Harga</th>
-            <!-- Tambahkan kolom lain jika diperlukan -->
         </tr>
         <tr>
             <td><?php echo $nota_data['id']; ?></td>
@@ -59,19 +56,14 @@ $nota_data = mysqli_fetch_assoc($result_nota);
             <td><?php echo $nota_data['catatan']; ?></td>
             <td>
                 <?php
-                // Tampilkan nama obat
                 echo $nota_data['nama_obat'];
                 ?>
             </td>
             <td>
                 <?php
-                // Tampilkan total harga
                 echo 'Rp ' . number_format($nota_data['total_harga']);
                 ?>
             </td>
-            <!-- Tambahkan sel lain sesuai dengan informasi yang ingin ditampilkan -->
         </tr>
-        <!-- Tambahkan baris lain jika perlu -->
     </table>
-    <!-- Tambahkan bagian lain dari nota jika diperlukan -->
 </div>

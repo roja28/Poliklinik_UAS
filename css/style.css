@@ -231,9 +231,9 @@ body {
     color: #ffffff;
 }
 
-/* Mengatur warna latar belakang tabel dan teks di dalamnya */
+
 .nota-table {
-    color: #ffffff; /* Warna teks */
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
